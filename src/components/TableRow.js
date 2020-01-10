@@ -8,6 +8,16 @@ export default class TableRow extends Component {
 	super(props);
     }
     render() {
-	return <TableCell/>
-	    }
+	var counter = [];
+	for (var i = 0; i < this.props.cols; i++) {
+	    counter[i] = i;
+	}
+	var parsed = counter.map(() => <td> <TableCell getCol={this.props.getCol}/> </td>);	
+	return parsed;
+    }
+}
+
+TableRow.propTypes = {
+    cols: PropTypes.number.isRequired,
+    getCol: PropTypes.string.isRequired
 }
