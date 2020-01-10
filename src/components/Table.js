@@ -25,13 +25,13 @@ export default class Table extends Component {
 	    counter[i] = i;
 	}
 	var parsed = counter.map(() => {
-		return <tr> <TableRow cols={this.state.numCols} getCol={this.state.currColor}/> </tr>;
+		return <tr><TableRow cols={this.state.numCols} getCol={this.state.currColor}/></tr>;
 	    });
 	return (
 		<div>
 		<DropDown changeCol={this.changeColor}/>
 		<Buttons decRow={this.decreaseRows} incRow={this.increaseRows} decCol={this.decreaseCols} incCol={this.increaseCols}/>
-		<table>
+		<table cellspacing="0" border="0">
 		{parsed}
 		</table>
 		</div>

@@ -12,7 +12,7 @@ export default class TableRow extends Component {
 	for (var i = 0; i < this.props.cols; i++) {
 	    counter[i] = i;
 	}
-	var parsed = counter.map(() => <td> <TableCell getCol={this.props.getCol}/> </td>);	
+	var parsed = counter.map(() => <td><TableCell getCol={this.props.getCol}/></td>);	
 	return parsed;
     }
 }

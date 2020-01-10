@@ -13,7 +13,6 @@ export default class TableCell extends Component {
     
     clickHandler = () => {
 	this.setState({myCol: this.props.getCol})
-	console.log(this.state.myCol);
     };
 
     render() {
